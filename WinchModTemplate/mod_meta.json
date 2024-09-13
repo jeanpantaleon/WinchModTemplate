@@ -1,7 +1,7 @@
 {
-	"Author": "YourName",
+	"Author": "DaSea",
 	"Name": "Winch Mod Template",
-	"ModGUID": "YourName.WinchModTemplate",
+	"ModGUID": "DaSea.WinchModTemplate",
 	"Version": "0.0.1",
 	"ModAssembly": "WinchModTemplate.dll",
 	"MinWinchVersion": "0.4.0",
