@@ -12,7 +12,7 @@ on:
 
 env:
     PROJ_USERNAME: DaSea
-    PROJ_NAME: WinchModTemplate
+    PROJ_NAME: ${{ github.event.repository.name }}
 
 permissions:
   contents: write
