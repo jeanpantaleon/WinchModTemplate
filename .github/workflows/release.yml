@@ -97,7 +97,7 @@ jobs:
                 allowUpdates: true
                 commit: ${{ github.ref_name }}
                 tag: ${{ needs.pre_job.outputs.version }}
-                name: v${{ needs.pre_job.outputs.version }}
+                name: "${{ env.PROJ_NAME}} v${{ needs.pre_job.outputs.version }}"
                 omitBodyDuringUpdate: true
                 artifacts: "${{ env.PROJ_USERNAME}}.${{ env.PROJ_NAME }}.zip"
                 draft: true
