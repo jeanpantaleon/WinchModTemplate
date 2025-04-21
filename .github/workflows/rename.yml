@@ -4,13 +4,11 @@ on:
     inputs:
       username:
         description: 'Your username'
-        default: ${{ github.repository_owner }}
-        required: false
+        required: true
         type: string
       modname:
         description: 'Your mod name'
-        default: ${{ github.event.repository.name }}
-        required: false
+        required: true
         type: string
 
 jobs:
