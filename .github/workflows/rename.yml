@@ -15,4 +15,21 @@ on:
 
 jobs:
   rename:
-    
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run renaming script
+        run: ./renaming.sh
+        
+      - name: Commit changes
+        run: |
+          git config --local user.name "${{ github.actor }}" 
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "Renaming with your datas"
+          
+      - name: Push changes  # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
