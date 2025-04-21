@@ -1,6 +1,6 @@
 name: Auto-Renaming
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       username:
         description: 'Your username'
@@ -17,7 +17,9 @@ jobs:
   rename:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+      
       - name: Run renaming script
         run: ./renaming.sh "${{ github.event.inputs.modname }}" "${{ github.event.inputs.username }}"
         
